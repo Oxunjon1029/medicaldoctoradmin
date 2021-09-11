@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    padding: 10px 0;
+}
+.logo_closed{
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+.doctoradmin_layout{
+    height: 100vh;
+}
+#doctoradmin_icon:hover{
+    color: blue !important;
+    transition: .6s;
+}
