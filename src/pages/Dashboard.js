@@ -80,7 +80,7 @@ const Dashboard = () => {
       text: "17-Sep",
     },
   ];
-  const [btnstate, setBtnState] = useState("");
+  const [btnstate, setBtnState] = useState("1");
   const BtnChange = (key) => {
     setBtnState(key);
   };

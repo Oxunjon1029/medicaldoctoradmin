@@ -55,7 +55,7 @@ const Davolanganlar = () => {
         setDavolanganVisible(false)
     }
   return (
-    <div>
+    <div style={{position:"relative"}}>
       <Table dataSource={dataSource} columns={columns} pagination={false} />
       <Pagination
         className="buyum_pagination"

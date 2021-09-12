@@ -37,10 +37,10 @@ const Home = (props) => {
             <Menu.Item key="3" icon={<CheckSquareOutlined />}>
               <Link to="/davolangan">Davolanganlar</Link>
             </Menu.Item>
-            <Menu.Item key="4" icon={<MessageOutlined />}>
+            {/* <Menu.Item key="4" icon={<MessageOutlined />}>
               Xabarlar
-            </Menu.Item>
-            <Menu.Item key="5" icon={<LayoutOutlined />}>
+            </Menu.Item> */}
+            <Menu.Item key="4" icon={<LayoutOutlined />}>
               Shablonlar
             </Menu.Item>
           </Menu>
