@@ -4,7 +4,9 @@ import './index.css';
 import App from './App';
 import 'antd/dist/antd.css'
 import './Styles/home.css';
-import './Styles/dashboard.css'
+import './Styles/dashboard.css';
+import './Styles/buyumlar.css';
+import './Styles/login.css';
 ReactDOM.render(
   <React.StrictMode>
     <App />

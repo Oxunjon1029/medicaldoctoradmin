@@ -1,7 +1,15 @@
-import { Button, Table, Tabs } from "antd";
+import { Button, Table } from "antd";
 import React, { useState } from "react";
-const { TabPane } = Tabs;
 const Dashboard = () => {
+  const [bandword, setbandword] = useState([]);
+  const BandBtn = (id) => {
+    if (bandword.includes(id)) {
+      let newband = bandword.filter((item) => item !== id);
+      setbandword(newband);
+    } else {
+      setbandword([...bandword, id]);
+    }
+  };
   const dataSource = [
     {
       key: "1",
@@ -30,26 +38,65 @@ const Dashboard = () => {
     },
     {
       title: "Holati",
-      render:(holat)=>(
-          <Button>
-              Bosh
-          </Button>
-      )
+      dataIndex: "key",
+      key: "key",
+      render: (key) => (
+        <Button
+          onClick={() => BandBtn(key)}
+          type={bandword.includes(key)?"danger":"default"}
+        >
+          {bandword.includes(key) ? "Band" : "Bosh"}
+        </Button>
+      ),
     },
   ];
+  const arr = [
+    {
+      key: "1",
+      text: "11-Sep",
+    },
+    {
+      key: "2",
+      text: "12-Sep",
+    },
+    {
+      key: "3",
+      text: "13-Sep",
+    },
+    {
+      key: "4",
+      text: "14-Sep",
+    },
+    {
+      key: "5",
+      text: "15-Sep",
+    },
+    {
+      key: "6",
+      text: "16-Sep",
+    },
+    {
+      key: "7",
+      text: "17-Sep",
+    },
+  ];
+  const [btnstate, setBtnState] = useState("");
+  const BtnChange = (key) => {
+    setBtnState(key);
+  };
 
   return (
     <div>
       <div className="dashboard_changable_items">
-        <Tabs tabPosition="top">
-          <TabPane tab="11-Sep" key="1"></TabPane>
-          <TabPane tab="12-Sep" key="2"></TabPane>
-          <TabPane tab="13-Sep" key="3"></TabPane>
-          <TabPane tab="14-Sep" key="4"></TabPane>
-          <TabPane tab="15-Sep" key="5"></TabPane>
-          <TabPane tab="16-Sep" key="6"></TabPane>
-          <TabPane tab="17-Sep" key="7"></TabPane>
-        </Tabs>
+        {arr.map((item) => (
+          <Button
+            onClick={() => BtnChange(item.key)}
+            key={item.key}
+            type={btnstate === item.key ? "primary" : "ghost"}
+          >
+            {item.text}
+          </Button>
+        ))}
       </div>
       <Table dataSource={dataSource} columns={columns} bordered />
     </div>

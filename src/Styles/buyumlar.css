@@ -1,0 +1,21 @@
+.Buyumlar{
+    position: relative;
+}
+.searchbox_buyumlar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.things_tabs{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.buyum_pagination{
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+}
